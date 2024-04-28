@@ -5,33 +5,33 @@ import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 
 @Controller('posts')
 export class PostController {
-    constructor(private readonly postsService: PostsService) {}
+    constructor(private readonly postService: PostService) {}
 
     @Post()
     @UseGuards(JwtAuthGuard)
     async create(@Body() createPostDto: CreatePostDto) {
-        return this.postsService.create(createPostDto);
+        return this.postService.create(createPostDto);
     }
 
     @Get()
     async findAll() {
-        return this.postsService.findAll();
+        return this.postService.findAll();
     }
 
     @Get(':id')
     async findOne(@Param('id') id: string) {
-        return this.postsService.findOne(id);
+        return this.postService.findOne(id);
     }
 
     @Put(':id')
     @UseGuards(JwtAuthGuard)
     async update(@Param('id') id: string, @Body() updatePostDto: UpdatePostDto) {
-        return this.postsService.update(id, updatePostDto);
+        return this.postService.update(id, updatePostDto);
     }
 
     @Delete(':id')
     @UseGuards(JwtAuthGuard)
     async remove(@Param('id') id: string) {
-        return this.postsService.remove(id);
+        return this.postService.remove(id);
     }
 }
