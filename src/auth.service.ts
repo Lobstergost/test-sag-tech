@@ -24,9 +24,9 @@ export class AuthService {
     }
 }
 export class AuthService {
-    register(registerDto: RegisterDto): Promise<string> {
+    register(registerDto: RegisterDto){
         }
 
-    login(loginDto: LoginDto): Promise<any> {
+    login(loginDto: LoginDto) {
         }
 }

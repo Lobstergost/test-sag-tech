@@ -3,18 +3,18 @@ import { CreatePostDto, UpdatePostDto } from './post.dto';
 
 @Injectable()
 export class PostService {
-    findAll(): Promise<any[]> {
+    findAll() {
     }
 
-    findOne(id: number): Promise<any> {
+    findOne(id: number){
     }
 
-    create(createPostDto: CreatePostDto): Promise<any> {
+    create(createPostDto: CreatePostDto) {
     }
 
-    update(id: number, updatePostDto: UpdatePostDto): Promise<any> {
+    update(id: number, updatePostDto: UpdatePostDto){
     }
 
-    remove(id: number): Promise<any> {
+    remove(id: number) {
     }
 }

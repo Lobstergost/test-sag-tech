@@ -3,15 +3,15 @@ import { UpdateUserDto } from './user.dto';
 
 @Injectable()
 export class UserService {
-    findAll(): Promise<any[]> {
+    findAll() {
     }
 
-    findOne(id: number): Promise<any> {
+    findOne(id: number) {
     }
 
-    update(id: number, updateUserDto: UpdateUserDto): Promise<any> {
+    update(id: number, updateUserDto: UpdateUserDto) {
     }
 
-    remove(id: number): Promise<any> {
+    remove(id: number) {
         }
 }
